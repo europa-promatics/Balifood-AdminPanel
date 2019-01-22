@@ -4,9 +4,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { HttpModule, Http, JsonpModule } from "@angular/http";
-import { MdInputModule } from '@angular/material';
-import { MdButtonModule, MdCheckboxModule,MdSlideToggleModule,MdProgressBarModule,MdDatepickerModule,MdSnackBarModule,
-       MdDialogModule,MdTabsModule,MdSortModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule,MatSlideToggleModule,MatProgressBarModule,MatDatepickerModule,MatSnackBarModule,
+       MatDialogModule,MatTabsModule,MatSortModule } from '@angular/material';
 
 import {ColorPickerModule} from 'angular4-color-picker';
 import { FileSelectDirective } from 'ng2-file-upload';
@@ -27,6 +27,9 @@ import { DialogComponent } from './dialogs/dialog/dialog.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { PasswordDialogComponent } from './dialogs/password-dialog/password-dialog.component';
 import { WebsocketService} from './recipe-mangement/websocket.service'
+import {MATERIAL_COMPATIBILITY_MODE} from '@angular/material';
+
+//import { Angular5Csv } from 'angular5-csv/Angular5-csv';
 
 
 
@@ -53,26 +56,26 @@ import { WebsocketService} from './recipe-mangement/websocket.service'
     AppRoutingModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MdButtonModule,
-    MdCheckboxModule,
-    MdSlideToggleModule,
-    MdDatepickerModule,
-    MdProgressBarModule,
-    MdSnackBarModule,
-    MdDialogModule,
-    MdTabsModule,
-    MdSortModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatTabsModule,
+    MatSortModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
     JsonpModule,
     DashboardModule,
-    MdInputModule,
+    MatInputModule,
     ColorPickerModule
  
 
   ],
-  providers: [WebsocketService],
+  providers: [WebsocketService,{provide: MATERIAL_COMPATIBILITY_MODE, useValue: true}],
   bootstrap: [AppComponent],
   entryComponents:[DialogComponent,PasswordDialogComponent]
 })

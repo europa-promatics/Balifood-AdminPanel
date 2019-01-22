@@ -9,7 +9,7 @@ export const DEV: Environment = {
 }
 
 export const PROD: Environment = {
-	endPoint:'http://ionicteam.com:8080/api/' 
+	endPoint:'http://18.218.43.56:5001/api/' 
 }
 export const environment: Environment= PROD;
 

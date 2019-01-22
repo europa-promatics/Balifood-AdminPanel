@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Angular2Csv } from 'angular2-csv/Angular2-csv';
+//import { Angular5Csv } from 'angular5-csv/Angular5-csv';
 import { Sort } from '@angular/material';
 import { UserManagementService } from '../user-mangement/user-management.service';
 
@@ -92,7 +92,7 @@ export class ReportManagementComponent implements OnInit {
      let splitDate=date.split('T');
      let pdfName='UserReport_'+splitDate[0]
       console.log(JSON.stringify(local));
-    new Angular2Csv(final, pdfName);
+     // new Angular5Csv(final, pdfName);
   }
 
 onGeneratePdf(){

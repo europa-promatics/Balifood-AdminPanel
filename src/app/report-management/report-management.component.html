@@ -1,10 +1,10 @@
 
 <section class="example-section" *ngIf="progressBar">
-      <md-progress-bar
+      <mat-progress-bar
           class="example-margin"
           [mode]="mode"
           >
-      </md-progress-bar>
+      </mat-progress-bar>
 </section>
 <div class="button-container-right">
 <button class="btn btn-black" (click)="generateReport()">Export as csv</button>
@@ -22,15 +22,15 @@
                     <div class="card-content">
                         <h4 class="card-title">All Users</h4>
                         <div class="dshbrd-table table-responsive">
-                           <table mdSort (mdSortChange)="sortData($event)" class="table table-hover">
+                           <table matSort (matSortChange)="sortData($event)" class="table table-hover">
                            	<thead class="text-danger text-center">
 							  <tr>
 							    <th >Sr.No.</th>
 							    <th>User Id</th>
-							    <th md-sort-header="name">Name of User</th>
+							    <th mat-sort-header="name">Name of User</th>
 							    <th>Email / ID Number</th>
 							    <th>Status</th>
-							    <th md-sort-header="date">Date of Registeration</th>
+							    <th mat-sort-header="date">Date of Registeration</th>
 							  </tr>
 							</thead>
 							<tbody class="text-center">
